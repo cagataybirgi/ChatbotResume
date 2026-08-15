@@ -1,6 +1,6 @@
 # Çağatay Birgi — Resume Assistant
 
-A reviewer-facing interactive résumé built with React, TypeScript, and Vite. The chat answers are intentionally grounded in the supplied CV, certificates, and linked public GitHub repositories; no API key is required.
+A reviewer-facing interactive résumé built with React, TypeScript, and Vite. The chat answers are intentionally grounded in the supplied CV, certificates, and linked public GitHub repositories; API key is required.
 
 ## Run on Windows
 
