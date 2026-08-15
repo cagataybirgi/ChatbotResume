@@ -272,8 +272,12 @@ function App() {
           </div>
 
           <div className="profile-main">
-            <div className="monogram" aria-hidden="true">
-              <span>ÇB</span>
+            <div className="monogram">
+              <img
+                src="/profile-photo.jpeg"
+                alt="Portrait of Çağatay Birgi"
+                decoding="async"
+              />
               <svg viewBox="0 0 100 100" role="presentation">
                 <circle cx="50" cy="50" r="47" />
               </svg>

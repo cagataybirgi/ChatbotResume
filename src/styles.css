@@ -209,11 +209,13 @@ a {
   background: rgba(255, 255, 255, 0.06);
 }
 
-.monogram span {
-  font-family: 'Space Grotesk', sans-serif;
-  font-size: 30px;
-  font-weight: 600;
-  letter-spacing: -0.07em;
+.monogram img {
+  width: calc(100% - 10px);
+  height: calc(100% - 10px);
+  display: block;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: center;
 }
 
 .monogram svg {
@@ -880,10 +882,6 @@ a {
     width: 78px;
     height: 78px;
     margin-bottom: 14px;
-  }
-
-  .monogram span {
-    font-size: 24px;
   }
 
   .availability {
