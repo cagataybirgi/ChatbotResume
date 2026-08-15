@@ -302,7 +302,7 @@ function App() {
           <div className="profile-actions">
             <a className="primary-download" href={resumeDocuments[0].path} download>
               <Download size={18} aria-hidden="true" />
-              Download résumé
+              Download CV
             </a>
             <div className="social-links" aria-label="Contact links">
               <a href="mailto:cagataybirgi@gmail.com" aria-label="Email Çağatay">
