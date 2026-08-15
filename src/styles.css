@@ -391,7 +391,7 @@ a {
   font-size: 14px;
 }
 
-.assistant-identity span {
+.assistant-identity > div > span {
   display: flex;
   align-items: center;
   gap: 7px;
@@ -1014,7 +1014,7 @@ a {
     padding: 11px 16px;
   }
 
-  .assistant-identity span {
+  .assistant-identity > div > span {
     max-width: 185px;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -1072,7 +1072,7 @@ a {
     height: 18px;
   }
 
-  .assistant-identity span {
+  .assistant-identity > div > span {
     display: none;
   }
 
