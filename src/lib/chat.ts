@@ -24,9 +24,9 @@ const replies = {
   intro: (): ChatReply => ({
     eyebrow: 'UPDATED PROFILE',
     title: 'Software development, networking, and accessible mobile AI.',
-    text: 'Çağatay Birgi is a Computer Engineering undergraduate at İzmir Institute of Technology, with expected graduation in 2027. His updated CV combines a Networking & Systems internship with a solo VPN reporting system and a three-person accessibility application built with Flutter and Gemini.',
+    text: 'Çağatay Birgi is a candidate for a Bachelor of Science in Computer Engineering at İzmir Institute of Technology, with expected graduation in 2027. His updated CV combines a Networking & Systems internship with a solo VPN reporting system and a three-person accessibility application built with Flutter and Gemini.',
     bullets: [
-      'Builds with Python, Java, React, Node.js, Dart, Kotlin, CSS, and SQL',
+      'Builds with Python, Java, Dart, Kotlin, React, Node.js, Express, Vite, Flutter, SQL, and MariaDB',
       'Has practical exposure to switching, routing, servers, virtualization, backups, and network security',
       'Contributes across UI, service integration, state management, and team coordination',
     ],
@@ -144,12 +144,12 @@ const replies = {
   skills: (): ChatReply => ({
     eyebrow: 'TECHNICAL SKILLS',
     title: 'Application development backed by networking fundamentals.',
-    text: 'The updated CV lists Python, Java, CSS, React, Node.js, Dart, and Kotlin, plus SQL, object-oriented programming, web development, app development, and networking.',
+    text: 'The updated CV groups Çağatay’s skills by discipline: programming, web and data, mobile and AI, and networking and systems.',
     bullets: [
-      'Web and backend: React, Vite, Node.js, Express, CSS',
-      'Mobile and accessibility: Flutter, Dart, Kotlin, speech and Gemini integrations',
-      'Data: SQL and MariaDB project experience',
-      'Networking and systems: VLANs, trunking, EtherChannel, OSPF, Windows Server, Linux, virtualization, RAID, backups, FortiGate, and IPsec',
+      'Programming: Python, Java, Dart, Kotlin, object-oriented programming',
+      'Web and data: React, Node.js, Express, Vite, CSS, SQL, MariaDB',
+      'Mobile and AI: Flutter, Gemini API, speech-to-text, text-to-speech, state management',
+      'Networking and systems: VLANs, trunking, EtherChannel, OSPF, Cisco hardware, Windows Server, Linux, virtualization, RAID, backups, FortiGate, IPsec',
     ],
     note: 'The headline skill list and internship technologies are taken from the updated CV.',
   }),
@@ -157,7 +157,7 @@ const replies = {
   education: (): ChatReply => ({
     eyebrow: 'EDUCATION',
     title: 'İzmir Institute of Technology (İYTE).',
-    text: 'Çağatay is pursuing an undergraduate degree in Computer Engineering at İzmir Institute of Technology from 2023 to 2027, with graduation expected in 2027. The updated CV lists his year as sophomore.',
+    text: 'Çağatay is pursuing a Bachelor of Science in Computer Engineering at İzmir Institute of Technology from 2023 to 2027, with graduation expected in 2027. The updated CV lists him as a fourth-year student for the 2026–2027 academic year.',
   }),
 
   internship: (): ChatReply => ({
@@ -174,14 +174,14 @@ const replies = {
 
   experience: (): ChatReply => ({
     eyebrow: 'EXPERIENCE',
-    title: 'Networking, team coordination, and customer relations.',
-    text: 'The updated CV combines a technical internship with project coordination and customer-facing experience.',
+    title: 'Networking, systems, team coordination, and customer relations.',
+    text: 'The updated CV combines a technical internship with project planning, team coordination, and customer-relations experience.',
     bullets: [
       'Bilgitürk Technology · Networking & Systems Intern · July–August 2026',
       'Yurt-Time Project · Team Member · September–December 2024',
-      'Tourism · Customer-relations support · July 2022',
+      'Tourism Sector · Customer Relations Support · July 2022',
     ],
-    note: 'The tourism date has been updated to July 2022 to match the new CV.',
+    note: 'Dates and role descriptions are taken directly from the updated one-page CV.',
   }),
 
   social: (): ChatReply => ({
@@ -189,7 +189,7 @@ const replies = {
     title: 'Sustained participation in ÇYDD activities.',
     text: 'The updated CV states that Çağatay served on ÇYDD Urla’s youth executive committee from November 2023 through November 2025, helping discuss event schedules and contributing to social-responsibility projects and organizational processes.',
     bullets: [
-      'Volunteer workshop instructor for the KODLAMACA computer-coding project, 2025–2026',
+      'Volunteer coding workshop instructor for KODLAMACA, 2025–2026',
       'Mentee in ÇYDD Mentorship Project terms 13 and 14, covering 2024–2026',
       'Participant in Köyde Şenlik Var!, 24–29 June 2025',
       'Career Roadmap workshops covering social-impact design, teamwork, conflict management, and creativity',
@@ -201,7 +201,7 @@ const replies = {
   documents: (): ChatReply => ({
     eyebrow: 'DOCUMENT LIBRARY',
     title: 'The updated CV and supporting certificates.',
-    text: 'Open or download Çağatay’s new two-page English CV and the supplied source documents behind the social-impact answers.',
+    text: 'Open or download Çağatay’s new one-page English CV and the supplied source documents behind the social-impact answers.',
     attachments: [...resumeDocuments, ...supportingDocuments],
     note: 'The previous English and Turkish CV exports are no longer presented in the document library.',
   }),
@@ -215,7 +215,7 @@ const replies = {
   hobbies: (): ChatReply => ({
     eyebrow: 'BEYOND THE CV',
     title: 'Curious, outdoors-oriented, and technology-aware.',
-    text: 'Çağatay enjoys researching historical events and global geography, playing computer games, reading scientific articles, following technology trends, hiking, and cycling.',
+    text: 'Çağatay’s updated CV lists interests in historical events, global geography, scientific articles, technology trends, hiking, and cycling.',
   }),
 
   contact: (): ChatReply => ({

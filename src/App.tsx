@@ -285,7 +285,7 @@ function App() {
 
             <span className="availability"><i /> Profile source verified</span>
             <h1>Çağatay<br />Birgi</h1>
-            <p className="profile-role">Computer Engineering<br />Undergraduate</p>
+            <p className="profile-role">Computer Engineering<br />BSc Candidate</p>
 
             <div className="profile-facts">
               <div>

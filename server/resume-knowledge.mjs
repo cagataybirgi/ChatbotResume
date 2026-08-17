@@ -2,18 +2,17 @@ export const RESUME_KNOWLEDGE = `
 VERIFIED RESUME CONTEXT FOR ÇAĞATAY BİRGİ
 
 [UPDATED CV — identity, contact, and education]
-- Çağatay Birgi is pursuing an undergraduate degree in Computer Engineering at İzmir Institute of Technology, 2023–2027, with graduation expected in 2027.
-- The updated CV lists his year as Sophomore.
+- Çağatay Birgi is pursuing a Bachelor of Science in Computer Engineering at İzmir Institute of Technology, 2023–2027, with graduation expected in 2027.
+- The updated CV lists him as a fourth-year student for the 2026–2027 academic year.
 - Email: cagataybirgi@gmail.com
 - Phone: +90 545 727 11 77
 - GitHub profile: https://github.com/cagataybirgi
 
 [UPDATED CV — technical skills]
-- Under Programming Languages, the CV lists Python, Java, CSS, React, Node.js, Dart, and Kotlin.
-- Database: SQL.
-- Other skills: object-oriented programming, web development, app development, and networking.
-- Project-specific technologies add Express, Vite, MariaDB, Flutter, Google Gemini vision-language model integration, speech-to-text, text-to-speech, and state management.
-- Internship exposure includes VLANs, trunking, EtherChannel, OSPF on Cisco hardware, Windows Server, Linux, virtualization, RAID, backups, FortiGate firewalls, and IPsec-based domain isolation.
+- Programming: Python, Java, Dart, Kotlin, and object-oriented programming.
+- Web and data: React, Node.js, Express, Vite, CSS, SQL, and MariaDB.
+- Mobile and AI: Flutter, Gemini API, speech-to-text, text-to-speech, and state management.
+- Networking and systems: VLANs, trunking, EtherChannel, OSPF, Cisco hardware, Windows Server, Linux, virtualization, RAID, backups, FortiGate, and IPsec.
 
 [UPDATED CV SELECTED PROJECT — VPN Session Reporter]
 - Identified as a solo project.
@@ -40,21 +39,21 @@ VERIFIED RESUME CONTEXT FOR ÇAĞATAY BİRGİ
 - The internship scope covers switching and routing: VLANs, trunking, EtherChannel, and OSPF on Cisco hardware.
 - It also covers server infrastructure: Windows Server, Linux, virtualization, RAID, and backups.
 - Network-security exposure includes FortiGate firewalls and IPsec-based domain isolation.
-- Yurt-Time Project, Team Member, September 2024–December 2024: assisted in task organization and team coordination, and developed teamwork and time-management skills.
-- Tourism, July 2022: provided support in customer relations and strengthened communication skills.
+- Yurt-Time Project, Team Member, September 2024–December 2024: supported task planning and team coordination, strengthening collaboration and time-management skills.
+- Tourism Sector, Customer Relations Support, July 2022: supported customer relations in a tourism setting, strengthening communication and service skills.
 
 [UPDATED CV and supporting certificates — volunteering]
 - The updated CV states that Çağatay served on the ÇYDD Urla youth executive committee from November 2023 through November 2025.
 - The committee discussed event schedules because many volunteers were university students.
 - He participated in social-responsibility projects and contributed to organizational processes.
-- Supporting certificate: volunteer workshop instructor for the KODLAMACA computer-coding project, 2025–2026.
+- The updated CV lists him as a volunteer coding workshop instructor for KODLAMACA, 2025–2026; a supporting certificate is available.
 - Supporting certificates: mentee in ÇYDD Mentorship Project terms 13 and 14, covering 2024–2026.
 - Supporting certificate: participant in Köyde Şenlik Var!, 24–29 June 2025.
 - Career Roadmap workshops covered social-impact design, teamwork and conflict management, and drawing-based creativity.
 
 [UPDATED CV — languages and interests]
 - Turkish: native. English: B2 / upper-intermediate. German: A2 / beginner.
-- Interests: researching historical events and global geography, playing computer games, reading scientific articles, following technology trends, hiking, and cycling.
+- Interests: historical events, global geography, scientific articles, technology trends, hiking, and cycling.
 
 [ADDITIONAL VERIFIED PUBLIC PROJECT — In-Context Learning Study]
 - This is an additional public project and is not one of the two selected projects in the updated CV.
@@ -80,7 +79,7 @@ VERIFIED RESUME CONTEXT FOR ÇAĞATAY BİRGİ
 - FrozenLakePuzzle repository: https://github.com/MrAkfook/FrozenLakePuzzle
 
 [Available downloadable documents]
-- Çağatay Birgi — CV: updated English CV, PDF, 2 pages.
+- Çağatay Birgi — CV: updated English CV, PDF, 1 page.
 - Köyde Şenlik Var! — Participation: ÇYDD Urla, June 2025, PDF.
 - Career Roadmap — Social Impact Design: 2-hour seminar, PDF.
 - ÇYDD Mentorship & Career Workshops: 2024–2026, 5-page PDF.

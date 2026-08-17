@@ -24,7 +24,7 @@ export type ChatReply = {
 export const resumeDocuments: Attachment[] = [
   {
     name: 'Çağatay Birgi — CV',
-    meta: 'English · PDF · 2 pages',
+    meta: 'English · PDF · 1 page',
     path: '/documents/Cagatay-Birgi-CV.pdf',
     kind: 'pdf',
   },
