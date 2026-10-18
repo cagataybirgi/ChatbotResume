@@ -18,13 +18,13 @@ import {
   UserRound,
 } from 'lucide-react';
 import {
-  quickQuestions,
-  resumeDocuments,
+  contactCards,
+  documents,
+  profile,
   type Attachment,
   type ChatReply,
-  welcomeReply,
-} from './data/resume';
-import { createReply } from './lib/chat';
+} from '../shared/resume.mjs';
+import { createReply, quickQuestions, welcomeReply } from './lib/chat';
 
 type Message =
   | { id: number; role: 'user'; text: string }
@@ -43,6 +43,9 @@ type ChatApiResponse = {
 const initialMessages: Message[] = [
   { id: 1, role: 'assistant', reply: welcomeReply },
 ];
+
+const cvDocument = documents.find((document) => document.id === 'cv') ?? documents[0];
+const contactUrl = (id: string) => contactCards.find((card) => card.id === id)?.url;
 
 function toApiHistory(messages: Message[]): ApiHistoryMessage[] {
   return messages.slice(1).map((message) => {
@@ -172,6 +175,7 @@ function App() {
     window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light',
   );
   const scrollRef = useRef<HTMLDivElement>(null);
+  const inputRef = useRef<HTMLInputElement>(null);
   const nextId = useRef(2);
 
   const suggestedQuestions = useMemo(
@@ -215,19 +219,10 @@ function App() {
       const result = await response.json() as ChatApiResponse;
       if (!result.reply?.text) throw new Error('The chat response was incomplete.');
 
-      const verifiedLocalReply = createReply(cleanQuestion);
       const assistantId = nextId.current++;
       setMessages((current) => [
         ...current,
-        {
-          id: assistantId,
-          role: 'assistant',
-          reply: {
-            ...result.reply,
-            links: verifiedLocalReply.links,
-            attachments: verifiedLocalReply.attachments,
-          },
-        },
+        { id: assistantId, role: 'assistant', reply: result.reply },
       ]);
     } catch {
       const assistantId = nextId.current++;
@@ -239,9 +234,7 @@ function App() {
           role: 'assistant',
           reply: {
             ...fallbackReply,
-            note: fallbackReply.note
-              ? `${fallbackReply.note} · Verified local answer.`
-              : 'Groq is temporarily unavailable · Showing a verified local answer.',
+            note: 'The AI assistant is offline right now, so this is a built-in answer.',
           },
         },
       ]);
@@ -253,6 +246,7 @@ function App() {
   const handleSubmit = (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     sendQuestion(input);
+    inputRef.current?.focus();
   };
 
   const resetChat = () => {
@@ -283,35 +277,35 @@ function App() {
               </svg>
             </div>
 
-            <span className="availability"><i /> Profile source verified</span>
+            <span className="availability"><i /> {profile.seeking.badge}</span>
             <h1>Çağatay<br />Birgi</h1>
             <p className="profile-role">Computer Engineering<br />BSc Candidate</p>
 
             <div className="profile-facts">
               <div>
                 <GraduationCap size={18} aria-hidden="true" />
-                <span><strong>İYTE</strong>Expected 2027</span>
+                <span><strong>{profile.education.shortSchool}</strong>Expected {profile.education.graduation}</span>
               </div>
               <div>
                 <Sparkles size={18} aria-hidden="true" />
-                <span><strong>Focus</strong>Software · Networking</span>
+                <span><strong>Focus</strong>{profile.focus}</span>
               </div>
             </div>
           </div>
 
           <div className="profile-actions">
-            <a className="primary-download" href={resumeDocuments[0].path} download>
+            <a className="primary-download" href={cvDocument.path} download>
               <Download size={18} aria-hidden="true" />
               Download CV
             </a>
             <div className="social-links" aria-label="Contact links">
-              <a href="mailto:cagataybirgi@gmail.com" aria-label="Email Çağatay">
+              <a href={contactUrl('email')} aria-label="Email Çağatay">
                 <Mail size={18} />
               </a>
-              <a href="tel:+905457271177" aria-label="Call Çağatay">
+              <a href={contactUrl('phone')} aria-label="Call Çağatay">
                 <Phone size={18} />
               </a>
-              <a href="https://github.com/cagataybirgi" target="_blank" rel="noreferrer" aria-label="View Çağatay's GitHub profile">
+              <a href={profile.github} target="_blank" rel="noreferrer" aria-label="View Çağatay's GitHub profile">
                 <GitBranch size={18} />
               </a>
             </div>
@@ -324,7 +318,7 @@ function App() {
               <span className="header-bot"><Bot size={19} /></span>
               <div>
                 <strong>Resume assistant</strong>
-                <span><i /> Grounded in verified sources</span>
+                <span><i /> Answers from his CV and GitHub</span>
               </div>
             </div>
 
@@ -361,7 +355,7 @@ function App() {
                   key={question}
                   type="button"
                   onClick={() => sendQuestion(question)}
-                  disabled={isTyping}
+                  aria-disabled={isTyping}
                 >
                   {question}
                 </button>
@@ -372,17 +366,17 @@ function App() {
               <label className="sr-only" htmlFor="chat-input">Ask about Çağatay’s résumé</label>
               <input
                 id="chat-input"
+                ref={inputRef}
                 value={input}
                 onChange={(event) => setInput(event.target.value)}
                 placeholder="Ask about projects, skills, experience…"
                 autoComplete="off"
-                disabled={isTyping}
               />
               <button type="submit" disabled={!input.trim() || isTyping} aria-label="Send question">
                 <Send size={18} aria-hidden="true" />
               </button>
             </form>
-            <p className="composer-note">Answers stay within the supplied résumé, certificates, and public project sources.</p>
+            <p className="composer-note">Answers come from Çağatay’s CV, certificates, and GitHub projects · Powered by GPT-OSS 120B on Groq.</p>
           </footer>
         </section>
       </div>

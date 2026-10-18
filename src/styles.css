@@ -728,13 +728,14 @@ a {
   transition: border-color var(--transition), color var(--transition), background var(--transition);
 }
 
-.suggestion-row button:hover:not(:disabled) {
+.suggestion-row button:hover:not([aria-disabled='true']) {
   border-color: color-mix(in srgb, var(--user) 40%, var(--border));
   color: var(--text);
 }
 
-.suggestion-row button:disabled {
+.suggestion-row button[aria-disabled='true'] {
   opacity: 0.45;
+  cursor: not-allowed;
 }
 
 .composer {
@@ -768,10 +769,6 @@ a {
 
 .composer input::placeholder {
   color: color-mix(in srgb, var(--text-soft) 72%, transparent);
-}
-
-.composer input:disabled {
-  opacity: 0.6;
 }
 
 .composer button {
